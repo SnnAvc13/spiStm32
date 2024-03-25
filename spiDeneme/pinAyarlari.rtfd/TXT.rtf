@@ -1,0 +1,154 @@
+{\rtf1\ansi\ansicpg1254\cocoartf2757
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\ftech\fcharset77 Symbol;\f2\froman\fcharset0 Times-Bold;
+\f3\fnil\fcharset0 HelveticaNeue;\f4\fswiss\fcharset0 Helvetica;\f5\fmodern\fcharset0 Courier;
+\f6\fmodern\fcharset0 Courier-Bold;}
+{\colortbl;\red255\green255\blue255;\red165\green165\blue165;\red0\green0\blue0;\red255\green255\blue255;
+\red25\green25\blue25;\red86\green86\blue86;\red38\green38\blue38;\red7\green58\blue51;\red107\green0\blue1;
+\red48\green0\blue72;\red109\green111\blue36;\red107\green0\blue109;\red0\green0\blue224;\red16\green125\blue2;
+\red77\green36\blue1;\red13\green102\blue133;}
+{\*\expandedcolortbl;;\cssrgb\c70588\c70588\c70588;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c12941\c12941\c12941;\cssrgb\c41176\c41176\c41176;\cssrgb\c20000\c20000\c20000;\cssrgb\c0\c29020\c26275;\cssrgb\c50196\c0\c0;
+\cssrgb\c25098\c392\c35294;\cssrgb\c50196\c50196\c18824;\cssrgb\c50196\c0\c50196;\cssrgb\c0\c0\c90196;\cssrgb\c0\c54902\c0;
+\cssrgb\c37647\c18824\c0;\cssrgb\c0\c47451\c59216;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17800\viewh13860\viewkind0
+\deftab720
+\pard\pardeftab720\sa300\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+RCC'ye T\uc0\u305 klay\u305 n 
+\f1 \uc0\u8594 
+\f0  Y\'fcksek H\uc0\u305 zl\u305  Saat (HSE) i\'e7in Kristal/Keramik Rezonat\'f6re ge\'e7in.\
+Saat Yap\uc0\u305 land\u305 rmas\u305  sekmesine T\u305 klay\u305 n 
+\f1 \uc0\u8594 
+\f0  HCLK (MHz) de\uc0\u287 erini 72'ye ayarlay\u305 n.\
+Pinout ve Yap\uc0\u305 land\u305 rma sekmesine T\u305 klay\u305 n.\
+Connectivty\'92e T\uc0\u305 klay\u305 n 
+\f1 \uc0\u8594 
+\f0  SPI1'e T\uc0\u305 klay\u305 n.\
+Mod Se\'e7ene\uc0\u287 inden Transmit se\'e7ene\u287 ini se\'e7in.\
+Configuration 
+\f1 \uc0\u8594 
+\f0  Parameter Settings\
+Baud oran\uc0\u305 n\u305   4'e de\u287 i\u351 tirin.\
+Configuration 
+\f1 \uc0\u8594 
+\f0  DMA Ayarlar\uc0\u305 \
+Add D\'fc\uc0\u287 mesine T\u305 klay\u305 n 
+\f1 \uc0\u8594 
+\f0  SPI1_TX'\uc0\u305  Se\'e7in.\
+\pard\pardeftab720\partightenfactor0
+\cf0 PB0, PB1 ve PB10'u GPIO_Output'a Ayarlay\uc0\u305 n.\
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs18 \cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs36 \cf3 \ul \ulc3 CRED\uc0\u304 TS
+\f0\b0 \cf0 \ulnone   :
+\f2\b \ul  https://www.micropeta.com/video37
+\f0\b0 \ulnone \
+
+\fs24 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf4 \cb5 PINLER\uc0\u304  BU SEK\u304 LDE AYARLAYIN\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 P\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f4 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Ekran Resmi 2024-03-25 16.16.47.png \width4800 \height2520 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+1-) projeyi a\'e7\uc0\u305 n ve gerkeli pin-clock ayarlar\u305 n\u305  yap\u305 n\
+2-) .h uzant\uc0\u305 l\u305  \'93header\'94 dosyalar\u305  Core/Inc k\u305 sm\u305 na,\
+3-) .c uzant\uc0\u305 l\u305  dosyalar\u305  Core/src k\u305 sm\u305 na koyun\
+\
+//\'f6rnek kod\
+\pard\pardeftab720\partightenfactor0
+
+\f5\fs26 \cf6 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 /* USER CODE BEGIN Includes */\cf7 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \strokec8 #include \cf9 \strokec9 "\cf10 \strokec10 ILI9341_STM32_Driver.h\cf9 \strokec9 "\cf7 \strokec3 \
+\cf8 \strokec8 #include \cf9 \strokec9 "\cf10 \strokec10 ILI9341_GFX.h\cf9 \strokec9 "\cf7 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 /* USER CODE END Includes */\cf7 \strokec3 \
+\
+  \cf6 \strokec6 /* USER CODE BEGIN 2 */\cf7 \strokec3 \
+  ILI9341_Init\cf11 \strokec11 ()\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Simple Text writing (Text, Font, X, Y, Color, BackColor)\cf7 \strokec3 \
+  \cf6 \strokec6 // Available Fonts are FONT1, FONT2, FONT3 and FONT4\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \strokec3 WHITE\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_SetRotation\cf11 \strokec11 (\cf7 \strokec3 SCREEN_HORIZONTAL_2\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawText\cf11 \strokec11 (\cf9 \strokec9 \'93\cf13 \strokec13 MERHABA DUNYA\cf9 \strokec9 \'93\cf11 \strokec11 ,\cf7 \strokec3  FONT4\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 90\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 110\cf11 \strokec11 ,\cf7 \strokec3  SIYAH\cf11 \strokec11 ,\cf7 \strokec3  \cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 //Writing numbers\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \strokec3 BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  
+\f6\b \cf9 \strokec9 static
+\f5\b0 \cf7 \strokec3  
+\f6\b \cf9 \strokec9 char
+\f5\b0 \cf7 \strokec3  BufferText\cf11 \strokec11 [\cf14 \strokec14 30\cf11 \strokec11 ]\cf12 \strokec12 ;\cf7 \strokec3 \
+  
+\f6\b \cf9 \strokec9 for
+\f5\b0 \cf11 \strokec11 (\cf7 \strokec3 uint8_t i \cf11 \strokec11 =\cf7 \strokec3  \cf14 \strokec14 0\cf12 \strokec12 ;\cf7 \strokec3  i \cf11 \strokec11 <=\cf7 \strokec3  \cf14 \strokec14 5\cf12 \strokec12 ;\cf7 \strokec3  i\cf11 \strokec11 ++)\cf7 \strokec3 \
+  \cf12 \strokec12 \{\cf7 \strokec3 \
+    \cf15 \strokec15 sprintf\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  \cf9 \strokec9 "\cf13 \strokec13 COUNT : \cf16 \strokec16 %d\cf9 \strokec9 "\cf11 \strokec11 ,\cf7 \strokec3  i\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  SIYAH\cf11 \strokec11 ,\cf7 \strokec3  BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 30\cf11 \strokec11 ,\cf7 \strokec3  MAVI\cf11 \strokec11 ,\cf7 \strokec3  BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 50\cf11 \strokec11 ,\cf7 \strokec3  KIRMIZI\cf11 \strokec11 ,\cf7 \strokec3  BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 70\cf11 \strokec11 ,\cf7 \strokec3  YESIL\cf11 \strokec11 ,\cf7 \strokec3  BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 90\cf11 \strokec11 ,\cf7 \strokec3  SARI\cf11 \strokec11 ,\cf7 \strokec3  BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 110\cf11 \strokec11 ,\cf7 \strokec3  MOR\cf11 \strokec11 ,\cf7 \strokec3  \cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 130\cf11 \strokec11 ,\cf7 \strokec3  TURUNCU\cf11 \strokec11 ,\cf7 \strokec3  BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 150\cf11 \strokec11 ,\cf7 \strokec3  BORDO\cf11 \strokec11 ,\cf7 \strokec3  \cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 170\cf11 \strokec11 ,\cf7 \strokec3  \cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 ,\cf7 \strokec3  SIYAH\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+    ILI9341_DrawText\cf11 \strokec11 (\cf7 \strokec3 BufferText\cf11 \strokec11 ,\cf7 \strokec3  FONT3\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 10\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 190\cf11 \strokec11 ,\cf7 \strokec3  MAVI\cf11 \strokec11 ,\cf7 \strokec3  SIYAH\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  \cf12 \strokec12 \}\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Horizontal Line (X, Y, Length, Color)\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawHLine\cf11 \strokec11 (\cf14 \strokec14 50\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 120\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 200\cf11 \strokec11 ,\cf7 \strokec3  LACIVERT\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Vertical Line (X, Y, Length, Color)\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawVLine\cf11 \strokec11 (\cf14 \strokec14 160\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 40\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 150\cf11 \strokec11 ,\cf7 \strokec3  KOYUYESIL\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Hollow Circle (Centre X, Centre Y, Radius, Color)\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawHollowCircle\cf11 \strokec11 (\cf14 \strokec14 160\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 120\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 80\cf11 \strokec11 ,\cf7 \strokec3  PEMBE\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Filled Circle (Centre X, Centre Y, Radius, Color)\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawFilledCircle\cf11 \strokec11 (\cf14 \strokec14 160\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 120\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 50\cf11 \strokec11 ,\cf7 \strokec3  ACIKMAVI\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Filled Rectangle (Start X, Start Y, Length X, Length Y)\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawRectangle\cf11 \strokec11 (\cf14 \strokec14 50\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 50\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 220\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 140\cf11 \strokec11 ,\cf7 \strokec3  YESILSARI\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Hollow Rectangle (Start X, Start Y, End X, End Y)\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \cb4 \outl0\strokewidth0 BEYAZ\cf11 \cb4 \outl0\strokewidth0 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawHollowRectangleCoord\cf11 \strokec11 (\cf14 \strokec14 50\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 50\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 270\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 190\cf11 \strokec11 ,\cf7 \strokec3  KOYUMAVI\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+\
+  \cf6 \strokec6 // Simple Pixel Only (X, Y, Color)\cf7 \strokec3 \
+  ILI9341_FillScreen\cf11 \strokec11 (\cf7 \strokec3 BEYAZ\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  ILI9341_DrawPixel\cf11 \strokec11 (\cf14 \strokec14 100\cf11 \strokec11 ,\cf7 \strokec3  \cf14 \strokec14 100\cf11 \strokec11 ,\cf7 \strokec3  SIYAH\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  HAL_Delay\cf11 \strokec11 (\cf14 \strokec14 1000\cf11 \strokec11 )\cf12 \strokec12 ;\cf7 \strokec3 \
+  \cf6 \strokec6 /* USER CODE END 2 */\cf7 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf7 \cb1 \strokec7 \
+}
